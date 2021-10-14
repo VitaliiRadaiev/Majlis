@@ -1,0 +1,379 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== FONTS ===========================================================================================
+@import "fonts";
+// ==== // FONTS ===========================================================================================
+
+// ==== VARS ===========================================================================================
+@import "vars";
+// ==== // VARS ===========================================================================================
+
+// ==== Normalize ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<MIXINE>===============================================================================================
+@import "mixins.scss";
+//</MIXINE>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "plagins/fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== PLAGINS ===========================================================================================
+@import "plagins/swiper-bundle";
+@import "plagins/animate";
+// ==== // PLAGINS ===========================================================================================
+
+// ==== FORM STYLE DEFAULT ===========================================================================================
+@import "forms";
+// ==== FORM STYLE DEFAULT ===========================================================================================
+
+// ==== POPUP ===========================================================================================
+@import "../common/popup/popup";
+// ==== // POPUP ===========================================================================================
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+	height: 100%;
+}
+html,
+body {
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $textColor;
+	font-size: 1.5rem;
+	transition: opacity 0.8s ease;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100%;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.center {
+	text-align: center;
+}
+
+._page {
+	flex: 1 1 auto;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	@media (max-width: 375px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+// === title ========================================================================
+.title-1 {
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 1.15625em;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	@media (max-width: $md4+px) {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+.title-2 {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 1.1666em;
+
+	@media (max-width: $md4+px) {
+		font-size: 21px;
+	}
+
+	&.with-line {
+		padding-left: 19px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: "";
+			top: 6px;
+			left: 0;
+			width: 4px;
+			height: 22px;
+			background-color: $mainColor;
+		}
+	}
+}
+
+.title-3 {
+}
+
+.title-4 {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1.16em;
+}
+
+.title-5 {
+}
+.title-6 {
+}
+
+.text {
+}
+
+.hover {
+}
+// === and title ========================================================================
+
+// === btn ========================================================================
+.btn-default {
+	background-color: $mainColor;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 54px;
+	padding: 0 39px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	transition: all 0.3s ease;
+	align-self: flex-start;
+
+	@media (min-width: 992px) {
+		&:hover {
+			background-color: $mainColor2;
+		}
+	}
+}
+
+button.btn-default {
+}
+
+// === and btn ========================================================================
+
+.input {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	height: 42px;
+	background: #ffffff;
+	border: 1px solid #d3d7d9;
+	font-size: 14px;
+	line-height: 16px;
+	color: $textColor;
+	padding: 13px 13px;
+}
+
+.textarea {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	background: #ffffff;
+	border: 1px solid #d3d7d9;
+	font-size: 14px;
+	line-height: 16px;
+	color: $textColor;
+	padding: 13px 13px;
+	resize: none;
+	height: 87px;
+}
+
+.link {
+	display: inline-flex;
+	align-items: center;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	color: $mainColor;
+	transition: all 0.3s ease;
+
+	& > span {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 24px;
+		width: 24px;
+		border-radius: 50%;
+		border: 2px solid #dae8f3;
+		margin-left: 5px;
+		font-size: 0.7em;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: $textColor;
+
+			& > span {
+				color: $textColor;
+			}
+		}
+	}
+}
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	font-size: 15px;
+	line-height: 140%;
+
+	& h1 {
+	}
+	& h2 {
+	}
+	& h3 {
+	}
+	& h4 {
+	}
+
+	& h5 {
+	}
+	& h6 {
+	}
+
+	& p {
+		margin-bottom: 1.6em;
+	}
+
+	& ul {
+		& > li {
+		}
+	}
+
+	& ol {
+	}
+
+	& figure {
+	}
+}
+
+// === and TEXT CONTETN BLOCK ========================================================================
+
+// ==== BLOCKS =====================================================
+@import "../common/header/header";
+@import "../common/footer/footer";
+@import "../common/checkbox/checkbox";
+@import "../common/search/search";
+@import "../common/promo-header/promo-header";
+// ==== BLOCKS =====================================================
+
+// ==== PAGES =====================================================
+@import "pages/home";
+// ==== AND PAGES =====================================================

@@ -1,0 +1,71 @@
+<div class="popup" id="popupForm">
+    <!-- 
+		API
+		use global methods popup.open('#popupForm'), popup.close('#popupForm');
+	 -->
+
+    <div class="popup_body">
+        <div class="popup_content">
+            <div class="popup__head">
+                <h2 class="popup__title title-4">Зворотній зв'язок</h2>
+                <div class="popup-close close-popup">
+                    <img class="img-svg" src="img/icons/close.svg" alt="">
+                </div>
+            </div>
+            <div class="popup_content-wrap">
+                <form  class="popup-form">
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Ваше ім'я <span>*</span>
+                        </label>
+                        <input type="text" class="input" required placeholder="Введіть прізвище">
+                    </div>
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Ваш контактний телефон
+                        </label>
+                        <input type="text" class="input _mask" placeholder="+380">
+                    </div>
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Ваш email <span>*</span>
+                        </label>
+                        <input type="email" class="input" required placeholder="Введіть ваш email">
+                    </div>
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Текст повідомлення
+                        </label>
+                        <textarea class="textarea" placeholder="Текст повідомлення"></textarea>
+                    </div>
+                    <div class="popup-form__item">
+                        <button class="btn-default">Відправити</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popupMessage">
+    <!-- 
+		API
+		use global methods popup.open('#popupMessage'), popup.close('#popupMessage');
+	 -->
+
+    <div class="popup_body">
+        <div class="popup_content">
+            <div class="popup__head">
+                <h2 class="popup__title title-4">Заявку прийнято</h2>
+                <div class="popup-close close-popup">
+                    <img class="img-svg" src="img/icons/close.svg" alt="">
+                </div>
+            </div>
+            <div class="popup_content-wrap">
+                <div class="popup_text text-content">
+                    Ваше повідомлення успішно відправлено.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
