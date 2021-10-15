@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Меджлис"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html')
+    <!-- == // TOP LINE ================== -->
+
+    <main class="_page page-404 _padding-top">
+       <div class="page-404__body container">
+            <div class="page-404__img">
+                <img src="img/logo/big-logo.svg" alt="">
+            </div>
+            <h1 class="page-404__title title-1">
+                Сторінку не знайдено
+            </h1>
+            <a href="index.html" class="btn-default">На головну</a>
+       </div>
+    </main>
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    @@include('common/popup/_popupForm.html',{})
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

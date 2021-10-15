@@ -1,0 +1,43 @@
+.breadcrumbs {
+    padding-top: 77px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    color: $textLightColor;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $md2+px) {
+        padding-top: 40px;
+    }
+
+    & > li {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    & a {
+        color: $textLightColor;
+        transition: all .3s ease;
+        position: relative;
+        display: inline-block;
+        padding-right: 27px;
+        @media (min-width: 992px) {
+            &:hover {
+                color: $textColor;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            content: "\e906";
+            font-family: 'icomoon';
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            font-size: 0.7em;
+        }
+    }
+}

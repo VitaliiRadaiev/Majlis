@@ -1,0 +1,57 @@
+.page-404 {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    &__body {
+        width: 100%;
+        flex: 1 1 auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+
+        @media (max-width: $md4+px) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &__bg-img {
+        position: absolute;
+        bottom: -7%;
+        left: -9%;
+        width: 70%;
+        max-width: 711px;
+        z-index: -1;
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__img {
+        height: 168px;
+        margin-bottom: 50px;
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 30px;
+            height: 120px;
+        }
+
+        & img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    & .btn-default {
+        align-self: center;
+    }
+}

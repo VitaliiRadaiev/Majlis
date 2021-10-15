@@ -215,6 +215,10 @@ textarea {
 			width: 4px;
 			height: 22px;
 			background-color: $mainColor;
+
+			@media (max-width: $md4+px) {
+				top: 0;
+			}
 		}
 	}
 }
@@ -226,6 +230,10 @@ textarea {
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 1.16em;
+
+	@media (max-width: $md4+px) {
+		font-size: 19px;
+	}
 }
 
 .title-5 {
@@ -321,11 +329,19 @@ button.btn-default {
 	@media (min-width: 992px) {
 		&:hover {
 			color: $textColor;
-
-			& > span {
-				color: $textColor;
-			}
 		}
+	}
+}
+
+.pt-0 {
+	padding-top: 0 !important;
+}
+
+.mb-space {
+	margin-bottom: 60px;
+
+	@media (max-width: $md4+px) {
+		margin-bottom: 40px;
 	}
 }
 
@@ -335,12 +351,38 @@ button.btn-default {
 	line-height: 140%;
 
 	& h1 {
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 1.15625em;
+		margin-top: 0;
+		margin-bottom: 20px;
+	
+		@media (max-width: $md4+px) {
+			font-size: 24px;
+			line-height: 28px;
+		}
 	}
 	& h2 {
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 1.1666em;
+		margin-bottom: 20px;
+
+		@media (max-width: $md4+px) {
+			font-size: 21px;
+		}
 	}
 	& h3 {
 	}
 	& h4 {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1.16em;
+		margin-bottom: 20px;
+
+		@media (max-width: $md4+px) {
+			font-size: 19px;
+		}
 	}
 
 	& h5 {
@@ -349,11 +391,29 @@ button.btn-default {
 	}
 
 	& p {
-		margin-bottom: 1.6em;
+		margin-bottom: 1.5em;
+
+		& ~ h2, & ~ h3, & ~ h4 {
+			margin-top: 37px;
+		}
 	}
 
 	& ul {
 		& > li {
+			position: relative;
+			padding-left: 23px;
+			
+			&:not(:last-child) {
+				margin-bottom: 21px;
+			}
+
+			&:before {
+				position: absolute;
+				content: '●';
+				top: 0px;
+				left: 9px;
+				font-size: 0.8em;
+			}
 		}
 	}
 
@@ -361,6 +421,29 @@ button.btn-default {
 	}
 
 	& figure {
+		margin-bottom: 20px;
+
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	& .new-card__time {
+		margin-bottom: 20px;
+	}
+}
+
+table {
+	margin-bottom: 28px;
+	& td {
+		padding: 10px 0;
+		vertical-align: top;
+
+		&:first-child {
+			padding-right: 15px;
+			color: $textLightColor;
+		}
 	}
 }
 
@@ -372,8 +455,17 @@ button.btn-default {
 @import "../common/checkbox/checkbox";
 @import "../common/search/search";
 @import "../common/promo-header/promo-header";
+@import "../common/breadcrumbs/breadcrumbs";
+@import "../common/announcements/announcements";
+@import "../common/pagination/pagination";
+@import "../common/gallery/gallery";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 @import "pages/home";
+@import "pages/news-detail";
+@import "pages/about";
+@import "pages/leadership";
+@import "pages/leadership-detail";
+@import "pages/page-404";
 // ==== AND PAGES =====================================================

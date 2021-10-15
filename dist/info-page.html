@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Меджлис</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header _lp">
+    <div class="header__top">
+        <div class="header__top-body container">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="header__soc" data-da="menu__scroll-wrap,last,991.98">
+                <ul class="social">
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/facebook.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/twitter.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/youtube.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/instagram.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/send.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__toggle-menu">
+                <img src="img/icons/burger.svg" alt="">
+                Меню
+            </div>
+            <div class="header__search" data-da="menu__head,last,991.98">
+                <form class="search">
+                    <button class="search__submit"><img src="img/icons/search.svg" alt=""></button>
+                    <input type="text" placeholder="Пошук">
+                    <div class="search__close"><img src="img/icons/close.svg" alt=""></div>
+                </form>
+            </div>
+            <div class="header__language" data-da="menu__head-top,first,991.98">
+                <a class="active" href="#">uA</a>
+                <a href="#">EN</a>
+                <a href="#"> QT</a>
+                <a href="#">RU</a>
+            </div>
+        </div>
+    </div>
+    <div class="header__menu">
+        <div class="header__menu-body container">
+            <div class="menu">
+                <div class="menu__head">
+                    <div class="menu__head-top">
+                        <div class="menu__close">
+                            <img src="img/icons/close-blue.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__scroll-wrap">
+                    <ul class="menu__list">
+                        <li class="menu-item-has-children">
+                            <a href="#" class="menu__link">Новини</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="menu__link " href="#">
+                                        Останні новини
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link active" href="#">
+                                        Прес-центр
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Анонси
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="menu__link">
+                                Меджліс
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="menu__link active" href="#">
+                                        Документи Меджлісу
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Міжнародні акти
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Законодавство України
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="menu__link">
+                                Кримські татари
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="menu__link active" href="#">
+                                        Документи Меджлісу
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Міжнародні акти
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Законодавство України
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="menu__link">
+                                Крим окупований
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="menu__link active" href="#">
+                                        Документи Меджлісу
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Міжнародні акти
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Законодавство України
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="menu__link">
+                                Курултай
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="menu__link active" href="#">
+                                        Документи Меджлісу
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Міжнародні акти
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Законодавство України
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="menu__link">
+                                Документи
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="menu__link active" href="#">
+                                        Документи Меджлісу
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Міжнародні акти
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu__link" href="#">
+                                        Законодавство України
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- == // TOP LINE ================== -->
+
+    <main class="_page page-404 _padding-top">
+       <div class="page-404__body container">
+           <div class="page-404__bg-img">
+               <img src="img/logo/big-logo-gray.svg" alt="">
+           </div>
+            <h1 class="page-404__title title-1">
+                Сторінку не знайдено
+            </h1>
+            <a href="index.html" class="btn-default">На головну</a>
+       </div>
+    </main>
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer">
+    <div class="footer__top">
+        <div class="footer__top-body container">
+            <div class="footer__col">
+                <ul class="footer__list">
+                    <li>
+                        <a href="#" class="footer__link">Новини</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Меджліс</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__list">
+                    <li>
+                        <a href="#" class="footer__link">
+                            Крим окупований
+                            </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Курултай</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__list">
+                    <li>
+                        <a href="#" class="footer__link">
+                            Кримські татари
+                            </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Документи</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__list">
+                    <li>
+                        <a href="tel:380442370995" class="footer__link">
+                            +38 (044) 237 09 95
+                            </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@qtmm.org" class="footer__link">info@qtmm.org</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="footer__bottom-body container">
+            <div class="footer__col">
+                <div class="footer__text">
+                    <p>All rights reserved.</p>
+                    <p>© 2011-202</p>
+                </div>
+            </div>
+            <div class="footer__col">
+                <ul class="social">
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/facebook.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/twitter.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/youtube.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/instagram.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/send.svg" alt="" class="img-svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__text">
+                    <p>вул. Болсуновська, 2, офіс 233, </p>
+                    <p>м. Київ, Україна, 01014,</p>
+                </div>
+            </div>
+            <div class="footer__col">
+                <a href="#popupForm" class="btn-default popup-link">
+                    Зворотній зв'язок
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+    <div class="popup" id="popupForm">
+    <!-- 
+		API
+		use global methods popup.open('#popupForm'), popup.close('#popupForm');
+	 -->
+
+    <div class="popup_body">
+        <div class="popup_content">
+            <div class="popup__head">
+                <h2 class="popup__title title-4">Зворотній зв'язок</h2>
+                <div class="popup-close close-popup">
+                    <img class="img-svg" src="img/icons/close.svg" alt="">
+                </div>
+            </div>
+            <div class="popup_content-wrap">
+                <form  class="popup-form">
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Ваше ім'я <span>*</span>
+                        </label>
+                        <input type="text" class="input" required placeholder="Введіть прізвище">
+                    </div>
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Ваш контактний телефон
+                        </label>
+                        <input type="text" class="input _mask" placeholder="+380">
+                    </div>
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Ваш email <span>*</span>
+                        </label>
+                        <input type="email" class="input" required placeholder="Введіть ваш email">
+                    </div>
+                    <div class="popup-form__item">
+                        <label for="" class="popup-form__label">
+                            Текст повідомлення
+                        </label>
+                        <textarea class="textarea" placeholder="Текст повідомлення"></textarea>
+                    </div>
+                    <div class="popup-form__item">
+                        <button class="btn-default">Відправити</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popupMessage">
+    <!-- 
+		API
+		use global methods popup.open('#popupMessage'), popup.close('#popupMessage');
+	 -->
+
+    <div class="popup_body">
+        <div class="popup_content">
+            <div class="popup__head">
+                <h2 class="popup__title title-4">Заявку прийнято</h2>
+                <div class="popup-close close-popup">
+                    <img class="img-svg" src="img/icons/close.svg" alt="">
+                </div>
+            </div>
+            <div class="popup_content-wrap">
+                <div class="popup_text text-content">
+                    Ваше повідомлення успішно відправлено.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

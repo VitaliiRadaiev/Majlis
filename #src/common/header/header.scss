@@ -211,6 +211,20 @@
 .social {
     display: flex;
 
+    &.social-v2 {
+        & > li {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+            & > a {
+                border-radius: 0;
+                border: 1px solid #E1E1E1;
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+
     & > li {
         &:not(:last-child) {
             margin-right: 10px;

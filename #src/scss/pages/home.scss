@@ -1,11 +1,15 @@
 .content {
     padding-top: 40px;
+    margin-bottom: 60px;
+
 
     @media (max-width: $md4+px) {
         padding-top: 25px;
+        margin-bottom: 40px;
     }
 
     &__body {
+        min-width: 0;
         @media (min-width: 992px) {
             display: flex;
         }
@@ -18,20 +22,31 @@
             margin-right: 40px;
             border-right: 1px solid #e1e1e1;    
         }
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: $md4+px) {
+            margin-bottom: 40px;
+        }
     }
 
     &__col-2 {
+        min-width: 0;
         @media (min-width: 992px) {
             flex: 1 1 auto;
         }
     }
 
     &__item {
-        margin-bottom: 60px;
+        &:not(:last-child) {
+            margin-bottom: 60px;
 
-        @media (max-width: $md4+px) {
-            margin-bottom: 30px;
+            @media (max-width: $md4+px) {
+                margin-bottom: 30px;
+            }
         }
+
     }
 
     &__title {

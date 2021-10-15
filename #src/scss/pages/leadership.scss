@@ -1,0 +1,77 @@
+.leadership {
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+        max-width: 678px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+
+        margin: 0 -10px;
+
+        @media (min-width: 480px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & > li {
+            margin-bottom: 52px;
+            padding: 0 10px;
+            flex: 0 1 25%;
+
+            @media (max-width: $md2+px) {
+                flex: 0 1 33.333%;
+            }
+            @media (max-width: $md3+px) {
+                flex: 0 1 50%;
+            }
+
+            @media (max-width: $md4+px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.leadership-card {
+    display: block;
+    color: $textColor;
+
+    @media (min-width: 992px) {
+        &:hover {
+            & .leadership-card__name {
+                color: $mainColor;
+            }
+        }
+    }
+
+    &__img {
+        height: 250px;
+        margin-bottom: 20px;
+        background-color: #C4C4C4;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        transition: all .3s ease;
+        margin-bottom: 10px;
+    }
+
+    &__position {
+    }
+}

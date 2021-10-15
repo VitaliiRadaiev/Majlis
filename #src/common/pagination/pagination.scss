@@ -1,0 +1,46 @@
+.pagging {
+    &__list {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        
+        & > li {
+            flex: 0 0 auto;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__item {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 42px;
+        min-width: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8px;
+
+        text-transform: uppercase;
+        color: $textColor;
+        border: 1px solid #D3D7D9;
+        transition: all .3s ease;
+
+        @media (min-width: 992px) {
+            &:hover:not(.active) {
+                background-color: rgba(#41B6E6, 0.2);
+            }
+        }
+
+        &.active {
+            color: #fff;
+            background-color: $mainColor;
+            border-color: $mainColor;
+        }
+    }
+}

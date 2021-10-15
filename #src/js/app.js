@@ -32,6 +32,8 @@ window.addEventListener('load', function () {
 	@@include('../common/header/header.js');
 	@@include('../common/promo-header/promo-header.js');
 	@@include('../common/popup/popup.js');
+	@@include('../common/announcements/announcements.js');
+	@@include('../common/gallery/gallery.js');
 
 
 
