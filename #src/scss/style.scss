@@ -213,10 +213,11 @@ textarea {
 			top: 6px;
 			left: 0;
 			width: 4px;
-			height: 22px;
+			height: calc(100% - 6px);
 			background-color: $mainColor;
 
 			@media (max-width: $md4+px) {
+				height: calc(100%);
 				top: 0;
 			}
 		}
@@ -468,4 +469,7 @@ table {
 @import "pages/leadership";
 @import "pages/leadership-detail";
 @import "pages/page-404";
+@import "pages/result-search";
+@import "pages/documents";
+@import "pages/legal-cases";
 // ==== AND PAGES =====================================================

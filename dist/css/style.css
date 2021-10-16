@@ -5224,7 +5224,7 @@ textarea {
   top: 6px;
   left: 0;
   width: 4px;
-  height: 22px;
+  height: calc(100% - 6px);
   background-color: var(--main-color);
 }
 
@@ -6445,6 +6445,265 @@ table td:first-child {
       align-self: center;
 }
 
+.search-v2__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-bottom: 15px;
+  position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.search-v2__input img {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  z-index: 2;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.search-v2__input input {
+  padding-left: 43px;
+}
+
+.search-v2__btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  min-width: 111px;
+  min-height: 42px;
+  margin-bottom: 23px;
+}
+
+.documents {
+  margin-bottom: 60px;
+}
+
+.documents > li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.documents__title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 62px;
+  padding: 15px 35px 15px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid #E1E1E1;
+}
+
+.documents__title img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 32px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.documents__title:before {
+  position: absolute;
+  font-family: "icomoon";
+  content: "";
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 0.7em;
+  color: var(--text-color-light);
+}
+
+.documents__title._active:before {
+  -webkit-transform: translateY(-50%) scale(1, -1);
+      -ms-transform: translateY(-50%) scale(1, -1);
+          transform: translateY(-50%) scale(1, -1);
+}
+
+.documents__content {
+  padding: 15px;
+  border: 1px solid #E1E1E1;
+  border-top: none;
+  display: none;
+}
+
+.documents__list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.documents__list > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.documents__list > li > span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  min-width: 24px;
+  padding-right: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #B2B4B2;
+}
+
+.documents__list > li a {
+  color: var(--main-color);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.archive {
+  margin-bottom: 40px;
+}
+
+.archive__title {
+  margin-bottom: 20px;
+}
+
+.archive__list {
+  padding: 20px;
+  background: #F3F4F6;
+}
+
+.archive__list > li {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.archive__list > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.archive__list > li > a {
+  color: var(--text-color);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.archive__list > li > a.active {
+  color: var(--main-color);
+}
+
+.archive__list > li > a > span {
+  color: #B2B4B2 !important;
+}
+
+.legal-cases__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.legal-cases__nav a {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1666em;
+  color: #071D49;
+  margin-bottom: 15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.legal-cases__nav a.active {
+  color: var(--main-color);
+}
+
+.legal-cases__list > li {
+  margin-bottom: 28px;
+}
+
+.legal-cases-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  border: 1px solid #E1E1E1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-color);
+}
+
+.legal-cases-card__col-1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 125px;
+          flex: 0 0 125px;
+  padding-right: 15px;
+}
+
+.legal-cases-card__col-2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-right: 20px;
+}
+
+.legal-cases-card__col-3 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.legal-cases-card__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.legal-cases-card__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.legal-cases-card__img:not(:first-child) {
+  margin-left: -28px;
+}
+
+.legal-cases-card__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1666em;
+  margin-bottom: 10px;
+}
+
+.legal-cases-card__author {
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+
 @media (min-width: 480px) {
   .leadership__list {
     display: -webkit-box;
@@ -6452,6 +6711,16 @@ table td:first-child {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .search-v2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .search-v2__input {
+    margin-right: 15px;
   }
 }
 
@@ -6843,6 +7112,18 @@ table td:first-child {
         -ms-flex: 0 0 340px;
             flex: 0 0 340px;
   }
+
+  .documents__list > li a:hover {
+    color: var(--second-color);
+  }
+
+  .archive__list > li > a:hover {
+    color: var(--main-color);
+  }
+
+  .legal-cases__nav a:hover {
+    color: var(--main-color);
+  }
 }
 
 @media (max-width: 1330px) {
@@ -7160,6 +7441,19 @@ table td:first-child {
     height: 194px;
     margin-bottom: 10px;
   }
+
+  .legal-cases-card {
+    display: block;
+    padding: 15px;
+  }
+
+  .legal-cases-card__images {
+    margin-bottom: 15px;
+  }
+
+  .legal-cases-card__author {
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -7173,6 +7467,7 @@ table td:first-child {
   }
 
   .title-2.with-line:before {
+    height: calc(100%);
     top: 0;
   }
 
@@ -7250,6 +7545,26 @@ table td:first-child {
   .page-404__img {
     margin-bottom: 30px;
     height: 120px;
+  }
+
+  .search-v2__btn {
+    width: 100%;
+  }
+
+  .documents {
+    margin-bottom: 40px;
+  }
+
+  .legal-cases__nav a {
+    font-size: 16px;
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: 379.98px) {
+  .pagging__item {
+    height: 32px;
+    min-width: 32px;
   }
 }
 
