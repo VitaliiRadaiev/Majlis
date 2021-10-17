@@ -34,6 +34,8 @@ window.addEventListener('load', function () {
 	@@include('../common/popup/popup.js');
 	@@include('../common/announcements/announcements.js');
 	@@include('../common/gallery/gallery.js');
+	@@include('../common/video/video.js');
+	@@include('../common/media-gallery/media-gallery.js');
 
 
 

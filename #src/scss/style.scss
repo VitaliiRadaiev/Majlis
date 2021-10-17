@@ -460,6 +460,8 @@ table {
 @import "../common/announcements/announcements";
 @import "../common/pagination/pagination";
 @import "../common/gallery/gallery";
+@import "../common/media-gallery/media-gallery";
+@import "../common/video/video";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -472,4 +474,8 @@ table {
 @import "pages/result-search";
 @import "pages/documents";
 @import "pages/legal-cases";
+@import "pages/legal-cases-detail";
+@import "pages/recommended-resources";
+@import "pages/media";
+@import "pages/structur";
 // ==== AND PAGES =====================================================

@@ -1,0 +1,88 @@
+.figurants {
+    margin-bottom: 40px;
+    & > li {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.figurants-card {
+    display: flex;
+    align-items: center;
+    padding: 51px;
+    min-height: 294px;
+    border: 1px solid #e1e1e1;
+
+    @media (max-width: $md3+px) {
+        padding: 25px;
+        display: block;
+        text-align: center;
+    }
+
+    &__col-1 {
+        flex: 0 1 100%;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__col-2 {
+        flex: 0 0 230px;
+    }
+
+    &__col-3 {
+        flex: 0 1 100%;
+        margin-top: 10px;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            text-align: right;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        color: #b2b4b2;
+    }
+
+    &__images {
+        display: flex;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        flex: 0 0 auto;
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #fff;
+
+
+
+        @media (min-width: 768px) {
+            &:not(:first-child) {
+                margin-left: -30px;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

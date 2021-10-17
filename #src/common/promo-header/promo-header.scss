@@ -104,7 +104,7 @@
         color: $mainColor;
 
         @media (min-width: 992px) {
-            &:hover {
+            &:hover:not(.swiper-button-disabled) {
                 background-color: $mainColor;
                 color: #fff;
             }
@@ -112,6 +112,11 @@
 
         @media (max-width: 1175px) {
             display: none;
+        }
+
+        &.swiper-button-disabled {
+            cursor: auto;
+            opacity: 0.5;
         }
     }
 
