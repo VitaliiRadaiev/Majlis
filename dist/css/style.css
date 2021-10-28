@@ -6952,6 +6952,40 @@ table td:first-child {
   color: #666666;
 }
 
+.media-list {
+  margin-bottom: 60px;
+}
+
+.media-list .media {
+  margin-bottom: 20px;
+}
+
+.media-list .media__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.media-list .media__list > li {
+  padding: 0 10px;
+  margin-bottom: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.media-list__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .structure {
   margin-bottom: 71px;
 }
@@ -7911,6 +7945,12 @@ table td:first-child {
     margin-bottom: 30px;
   }
 
+  .media-list .media__list > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
   .structure__managers:before {
     position: absolute;
     content: "";
@@ -7985,6 +8025,14 @@ table td:first-child {
 
   .legal-cases-card__author {
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .media-list .media__list > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 
@@ -8107,6 +8155,10 @@ table td:first-child {
     width: 100px;
     height: 50px;
     margin-right: 15px;
+  }
+
+  .media-list {
+    margin-bottom: 40px;
   }
 
   .structure {
